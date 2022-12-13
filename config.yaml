@@ -1,0 +1,32 @@
+# 基础配置
+baseURL: "https://blog.738888.xyz"
+title: "bpking's Blog"
+languageCode: "zh-cn" # 语言编码(如简体中文: zh-CN)
+DefaultContentLanguage: "zh-cn"
+hasCJKLanguage: true  # 检测 CJK
+paginate: 6           # 每个分页文章数
+paginatePath: "page"
+permalinks:           # 永久连结格式
+    post: /:slug/
+    page: /:filename/
+theme: "PaperMod"
+
+enableInlineShortcodes: true # 短代码支持
+enableRobotsTXT: true # 启用 Robots.txt
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true     # 启用 Emoji
+enableGitInfo: true # Using the last git commit date for that content file.
+pygmentsUseClasses: true
+# googleAnalytics: UA-123-45
+
+#启用rss
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+        
+params:
+    ShowFullTextinRSS: true # RSS 全文输出
