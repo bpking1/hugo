@@ -1,6 +1,6 @@
 ---
 title: surface pro4安装官方chrome OS及windows10双系统
-date: 2020/08/26 0:46:49
+date: 2020-08-26 0:46:49
 ---
 
 ## 需求

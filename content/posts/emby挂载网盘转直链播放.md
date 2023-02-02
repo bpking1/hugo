@@ -1,7 +1,8 @@
 ---
 title: emby挂载网盘转直链播放
-date: 2021/09/09 22:15:00
+date: 2021-09-09 22:15:00
 ---
+#### 此文章已过时，请使用alist的方式 [地址](https://blog.738888.xyz/posts/emby_jellyfin_to_alist_directlink/)
 
 将emby视频播放地址劫持到直链网盘,下面以onemanager为例,别的盘自己参考修改
 onemanager 地址 : https://github.com/qkqpttgf/OneManager-php

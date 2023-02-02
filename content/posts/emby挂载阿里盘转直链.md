@@ -23,21 +23,31 @@ aliases:
 调用外部播放器的油猴脚本账号无法登陆了，换了个新地址:[embyLaunchPotplayer (greasyfork.org)](https://greasyfork.org/en/scripts/459297-embylaunchpotplayer)
 
 2022/5/13
+
 1.兼容jellyfin
+
 2.解决infuse无法播放的问题,感谢@amwamw968
+
 3.用nignx添加了字幕文件的缓存支持
 
 2022/1/12
+
 1.重写了js脚本,支持rclone union,不再需要挂载名和alist盘名一致,不再需要设置emby api_key
+
 2.修复了js脚本不能正确获取同一个视频不同清晰度版本的问题
 
 2021/12/06
 
 1.alist项目作者最近的更新中加入了阿里云盘之外的网盘的支持,且不在需要刷新目录
+
 2.换了另外一个用rust语言写的阿里盘webdav项目,内存占用很小
+
 3.修改了njs脚本中的正则,来修复emby魔改客户端terminusPlayer没有走直链
+
 4.修改nginx配置修复了阿里云盘直链无法在emby web中播放
+
 5.修复了由于反代无法使用jellyfin-mpv-shim直链播放
+
 6.用nignx添加了emby图片的缓存支持
 
 ## 这篇文章的受众:
