@@ -1,32 +1,345 @@
-# 基础配置
-baseURL: "https://blog.738888.xyz"
-title: "bpking's Blog"
-languageCode: "zh-cn" # 语言编码(如简体中文: zh-CN)
-DefaultContentLanguage: "zh-cn"
-hasCJKLanguage: true  # 检测 CJK
-paginate: 6           # 每个分页文章数
-paginatePath: "page"
-permalinks:           # 永久连结格式
-    post: /:slug/
-    page: /:filename/
-theme: "PaperMod"
-
-enableInlineShortcodes: true # 短代码支持
-enableRobotsTXT: true # 启用 Robots.txt
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-enableEmoji: true     # 启用 Emoji
-enableGitInfo: true # Using the last git commit date for that content file.
-pygmentsUseClasses: true
-# googleAnalytics: UA-123-45
-
-#启用rss
-outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON
-        
+baseURL: https://blog.738888.xyz
+theme: LoveIt
+title: bpking's blog
+languageCode: zh-CN
+languageName: 简体中文
+hasCJKLanguage: true
+paginate: 12
+#googleAnalytics: ""
+#copyright: ""
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+# 忽略一些构建错误
+ignoreErrors:
+  - error-remote-getjson
+  - error-missing-instagram-accesstoken
+author:
+  name: bpking
+  email: ""
+  link: "https://github.com/bpking1"
+menu:
+  main:
+    - weight: 1
+      identifier: posts
+      name: 文章
+      url: /posts/
+    - weight: 2
+      identifier: tags
+      name: 标签
+      url: /tags/
+    - weight: 3
+      identifier: categories
+      name: 分类
+      url: /categories/
 params:
-    ShowFullTextinRSS: true # RSS 全文输出
+  defaultTheme: dark
+  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
+  gitRepo: "https://github.com/bpking1/hugo"
+  dateFormat: 2006-01-02
+  title: 我的网站
+  description: 这是我的全新 Hugo 网站
+  images:
+    - /logo.png
+  header:
+    desktopMode: fixed
+    mobileMode: auto
+    title:
+      logo: ""
+      name: ""
+      pre: ""
+      post: ""
+      typeit: false
+  footer:
+    enable: true
+    custom: ""
+    hugo: true
+    copyright: true
+    author: true
+    since: 2019
+    icp: ""
+    license: <a rel="license external nofollow noopener noreffer"
+      href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC
+      BY-NC 4.0</a>
+  section:
+    paginate: 20
+    dateFormat: 01-02
+    rss: 10
+  list:
+    paginate: 20
+    dateFormat: 01-02
+    rss: 10
+  app:
+    title: 我的网站
+    noFavicon: false
+    svgFavicon: ""
+    themeColor: "#ffffff"
+    iconColor: "#5bbad5"
+    tileColor: "#da532c"
+  search:
+    enable: true
+    type: lunr
+    contentLength: 4000
+    placeholder: ""
+    maxResultLength: 10
+    snippetLength: 50
+    highlightTag: em
+    absoluteURL: false
+    algolia:
+      index: ""
+      appID: ""
+      searchKey: ""
+  home:
+    rss: 10
+    profile:
+      enable: true
+      gravatarEmail: ""
+      #avatarURL: /images/avatar.png
+      title: ""
+      subtitle: 这是我的全新 Hugo 网站
+      typeit: true
+      social: true
+      disclaimer: ""
+    posts:
+      enable: true
+      paginate: 6
+      defaultHiddenFromHomePage: false
+  social:
+    GitHub: https://github.com/bpking1
+    #Linkedin: ""
+    Twitter: xxxx
+    Email: xxxx@xxxx.com
+    RSS: true
+  page:
+    hiddenFromHomePage: false
+    hiddenFromSearch: false
+    twemoji: false
+    lightgallery: false
+    ruby: true
+    fraction: true
+    fontawesome: true
+    linkToMarkdown: true
+    rssFullText: false
+    toc:
+      enable: true
+      keepStatic: true
+      auto: true
+    code:
+      copy: true
+      maxShownLines: 50
+    math:
+      enable: true
+      inlineLeftDelimiter: ""
+      inlineRightDelimiter: ""
+      blockLeftDelimiter: ""
+      blockRightDelimiter: ""
+      copyTex: true
+      mhchem: true
+    mapbox:
+      accessToken: ""
+      lightStyle: mapbox://styles/mapbox/light-v10?optimize=true
+      darkStyle: mapbox://styles/mapbox/dark-v10?optimize=true
+      navigation: true
+      geolocate: true
+      scale: true
+      fullscreen: true
+    share:
+      enable: false
+      Twitter: true
+      Facebook: true
+      Linkedin: false
+      Whatsapp: false
+      Pinterest: false
+      Tumblr: false
+      HackerNews: true
+      Reddit: false
+      VK: false
+      Buffer: false
+      Xing: false
+      Line: true
+      Instapaper: false
+      Pocket: false
+      Flipboard: false
+      Weibo: true
+      Blogger: false
+      Baidu: false
+      Odnoklassniki: false
+      Evernote: false
+      Skype: false
+      Trello: false
+      Mix: false
+    comment:
+      enable: true
+      disqus:
+        enable: false
+        shortname: ""
+      gitalk:
+        enable: true
+        owner: "bpking1"
+        repo: "hugo"
+        clientId: "4c5689d7a34d975c20f0"
+        clientSecret: "c0bd6d5246990970362a13fce343f3501a51e7ce"
+      valine:
+        enable: false
+        appId: ""
+        appKey: ""
+        placeholder: ""
+        avatar: mp
+        meta: ""
+        pageSize: 10
+        lang: ""
+        visitor: true
+        recordIP: true
+        highlight: true
+        enableQQ: false
+        serverURLs: ""
+        emoji: ""
+      facebook:
+        enable: false
+        width: 100%
+        numPosts: 10
+        appId: ""
+        languageCode: zh_CN
+      telegram:
+        enable: false
+        siteID: ""
+        limit: 5
+        height: ""
+        color: ""
+        colorful: true
+        dislikes: false
+        outlined: false
+      commento:
+        enable: false
+      utterances:
+        enable: false
+        repo: ""
+        issueTerm: pathname
+        label: ""
+        lightTheme: github-light
+        darkTheme: github-dark
+      giscus:
+        enable: false
+        repo: ""
+        repoId: ""
+        category: Announcements
+        categoryId: ""
+        lang: ""
+        mapping: pathname
+        reactionsEnabled: "1"
+        emitMetadata: "0"
+        inputPosition: bottom
+        lazyLoading: false
+        lightTheme: light
+        darkTheme: dark
+    library:
+      css: {}
+      js: {}
+    seo:
+      images: []
+      publisher:
+        name: ""
+        logoUrl: ""
+  typeit:
+    speed: 100
+    cursorSpeed: 1000
+    cursorChar: "|"
+    duration: -1
+  verification:
+    google: ""
+    bing: ""
+    yandex: ""
+    pinterest: ""
+    baidu: ""
+  seo:
+    image: ""
+    thumbnailUrl: ""
+  analytics:
+    enable: false
+    google:
+      id: ""
+      anonymizeIP: true
+    fathom:
+      id: ""
+      server: ""
+    plausible:
+      dataDomain: ""
+    yandexMetrica:
+      id: ""
+  cookieconsent:
+    enable: true
+    content:
+      message: ""
+      dismiss: ""
+      link: ""
+  cdn:
+    data: ""
+  compatibility:
+    polyfill: false
+    objectFit: false
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+frontmatter:
+  date:
+    - :filename
+    - :default
+    - :fileModTime
+permalinks:
+  #post: /:year/:month/:day/:slug/
+  post: /:slug/
+privacy:
+  googleAnalytics: {}
+  twitter:
+    enableDNT: true
+  youtube:
+    privacyEnhanced: true
+mediaTypes:
+  text/plain:
+    suffixes:
+      - md
+outputFormats:
+  MarkDown:
+    mediaType: text/plain
+    isPlainText: true
+    isHTML: false
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - MarkDown
+  section:
+    - HTML
+    - RSS
+  taxonomy:
+    - HTML
+    - RSS
+  taxonomyTerm:
+    - HTML
+
+
