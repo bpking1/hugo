@@ -5,8 +5,8 @@ languageCode: zh-CN
 languageName: 简体中文
 hasCJKLanguage: true
 paginate: 12
-#googleAnalytics: ""
-#copyright: ""
+#googleAnalytics: G-GLPZ7G3V08
+copyright: GPLv3
 enableRobotsTXT: true
 enableGitInfo: true
 enableEmoji: true
@@ -255,10 +255,10 @@ params:
     image: ""
     thumbnailUrl: ""
   analytics:
-    enable: false
+    enable: true
     google:
-      id: ""
-      anonymizeIP: true
+      id: "G-GLPZ7G3V08"
+      anonymizeIP: false
     fathom:
       id: ""
       server: ""
