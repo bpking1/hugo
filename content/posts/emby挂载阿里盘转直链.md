@@ -66,11 +66,13 @@ wget https://github.com/bpking1/embyExternalUrl/releases/download/v0.0.1/emby2Al
     └── nginx.conf
 
 ### 2. 
-看情况修改emby.js 中的设置项目,通常来说只需要改alist密码
+看情况修改emby.js 中的设置项目，按照js里面的说明填写
 这里默认emby在同一台机器并且使用8096端口,否则要修改 emby.js和emby.conf中emby的地址
 ### 3 . 如果不挂载阿里云盘 可以跳过这一步
+
 修改docker-compose.yml 中 service.ali-webdav 的 REFRESH_TOKEN
 获取方法参考原项目地址: https://github.com/messense/aliyundrive-webdav
+补充说明：也可以使用alist的webdav挂载，而不使用这里的aliyundrive-webdav
 
 ### 4. 
 启动服务: 在 ~/emby2Alist 目录下执行
@@ -92,13 +94,13 @@ docker-compose logs -f
 注意: 
 
 1. 添加od,gd盘可以直接复制rclone配置里面的 clientid , secret , refreshToken,不用再麻烦去重新搞一次了
-2. **不使用阿里云盘可以跳过这步**
-   alist阿里盘的refreshToken与webdav那个token是不一样的,这里需要的是要不需要referrer请求头的token,详情请参考这个[issue](https://github.com/Xhofe/alist/issues/88) , 可以用这个网页来获取 [阿里云盘 - RefreshToken (cooluc.com)](https://media.cooluc.com/decode_token/) 
-3. 盘名建议一致,这样获取直链更快,不一致也可以
+2. 盘名建议一致,这样获取直链更快,不一致也可以
 
 ~~添加的网盘在alist里面的名称需要与 rclone挂载的文件夹名称一样  比如挂载路径为 /mnt/ali 那么盘的名称也要叫 ali~~
 
 ### 6. 如果不挂载阿里云盘 可以跳过这一步
+补充说明：也可以使用alist的webdav挂载，而不使用这里的aliyundrive-webdav
+
 配置rclone,挂载网盘,这里以阿里盘webdav为例
 
 使用rclone 挂载 阿里盘webdav 
