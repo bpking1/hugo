@@ -1,7 +1,7 @@
 ---
 title: rclone加解密网盘emby直链播放
 slug: emby_jellyfin_to_rclone_encrypt_directlink
-date: "2023-4-11"
+date: 2023-04-11
 draft: false
 categories:
     - fun
